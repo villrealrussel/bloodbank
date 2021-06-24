@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="donor">         
+            <div class="donor-container">
+                <div class="donor-box">
+                    <form method="POST" action="Patient">
+                        {% csrf_token %}
+                        <h2><strong>Blood</strong> Bank</h2>
+                        <label for="name"> Name:</label>
+                        <input type="text" id="happy" name="happy" placeholder="Blood Bank Center" required>
+                        <label for="telephone_number"> Blood Bank Telephone Number:</label>
+                        <input type="tel" id="telephone_number" name="telephone_number" placeholder="xxxx-xxx-xxx" required>
+                        <br>
+                        <label for="Address"> Address:</label>
+                        <input type="text" id="blood_bank_address" name="blood_bank_address" placeholder="Blood Bank Address" required>
+                        <label for="quantity_received"> Quantity:</label>
+                        <input type="number" id="quantity_received" name="quantity_received" placeholder="Quanitity of Bag Donated" required>
+                        <br>
+                        <br>
+                        <label for="description"> Description:</label>
+                        <fieldset>
+                          <textarea name="descriptione" rows="6" class="form-control" id="description" placeholder="Enter description" required></textarea>
+                        </fieldset>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h2><strong>Partner</strong> Hospital</h2>
+                        <label for="hospital_name"> Hospital Name:</label>
+                        <input type="text" id="hospital_name" name="hospital_name" placeholder="Blood donated will be transfered to..." required>
+                        <label for="hospital_number"> Hospital Telephone Number:</label>
+                        <input type="tel" id="phone_number" name="phone_number" placeholder="xxxx-xxx-xxx" required>
+                        <label for="hospital_add"> Address:</label>
+                        <input type="text" id="hospital_address" name="hospital_address" placeholder="Hospital Address" required>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h2><strong>Employee</strong> In-charge</h2>
+                        <label for="employee_name"> Employee Name:</label>
+                        <input type="text" id="employee_name" name="employee_name" placeholder="Enter name" required>
+                        <label for="employee_phone_number"> Hospital Telephone Number:</label>
+                        <input type="tel" id="employee_phone_number" name="employee_phone_number" placeholder="xxxx-xxx-xxx" required>
+                        <br>
+                        <br>
+                        <label for="employee_Address"> Address:</label>
+                        <input type="text" id="employee_Address" name="employee_Address" placeholder="Employee Address" required>
+                        <label for="employee_position"> Employee Position:</label>
+                        <input type="text" id="employee_position" name="employee_position" placeholder="Employee Position" required>
+                        
+                        <br>
+                        <br>
+                        <br>
+                        
+      
+                
+                         <input type="submit"  id="btndonate" value="Submit">
+      
+                     </a>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>  
+
+   {% endblock %}

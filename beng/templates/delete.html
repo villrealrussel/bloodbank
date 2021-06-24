@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<style type="text/css">
+    
+    p.ex1 {
+  font-size: 30px;
+}
+</style>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+<center>
+
+            <p class="ex1">Are you sure you want to delete "{{item}}"?</p>
+
+            <form action="{% url 'delete_blood' item.id  %}" method="POST">
+                
+                {% csrf_token %}
+                <a class="btn btn-warning" href="{% url 'home' %}">Cancel</a>
+
+                <input class="btn btn-danger" type="submit" name="Confirm">
+            </center>
+            </form>
+        </div>
+    </div>
+</div>
+                        
+<br><br><br><br><br><br><br><br><br><br><br><br>                   
+    {% endblock %}

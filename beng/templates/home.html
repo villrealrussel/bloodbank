@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="create-task">
+        <h2>Create a Task</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            <input type="submit" value="Turn-In">
+        </form>
+    
+
+
+    <main>
+        <section class="site-title" id="banner">
+            <div class="site-background">
+                <h1>Donate Blood to Save Life</h1>
+                <h3>Your donation can save lives. Make an appointment to donate blood</h3>
+                  <a href="firstpage" target="_blank">
+                 <button class="btn">Donate now!</button>
+                </a>
+            </div>
+        </section>
+  </main>
+  </div>
+  
+{% endblock %}

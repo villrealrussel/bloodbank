@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="donor">         
+            <div class="donor-container">
+                <div class="donor-box">
+                 
+                    <form method="POST" action="Last"> 
+                        <h2><strong>Blood</strong> Request</h2>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        <label for="quantity"> Quantity of Blood Needed:</label>
+                        <input type="number" id="quantity" name="quantity" required>
+                        <br><br>
+                        <label for="bld_type_req">Blood Type:</label>
+                          <select name="bld_type_req" id="bld_type_req" required>
+                            <option value="0+">O+</option>
+                            <option value="0-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                          </select>
+                        <label for="recipient_name"> Recipient Name:</label>
+                        <input type="text" id="recipient_name" name="recipient_name" placeholder="Recipient's Fullname" required>
+                        
+                       
+                        <br>
+                        <br>
+                        <br>
+                         <input style="color: red"align="center" type="submit" value="Request"> </input>
+    
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>  
+{% endblock %}

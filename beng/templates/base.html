@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ 
+<head>
+        <title> Blood Bank</title>
+        <meta charset="utf-8">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static '/css/font.css' %}">
+         <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    </head> 
+
+        <!-- header -->
+       <header class="header" id="header">
+        <div class="navigation">
+            <nav class="nav_center container">
+                <div class="title">
+                <a href="/" class="nav_link">Blood Bank: Dugtong Buhay Program</a> 
+                </div>
+
+                <div class="nav_menu">
+                    <ul class="nav_list">
+                      <li class="nav-item">
+                        <div class="item">
+                          <a href="/" class="nav_link">Home</a>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="dropdown">
+                          <a href="" class="nav_link">Donation</a>
+                          <div class="dropdown-content">
+                            <a href="firstpage">Be a Donor</a>
+                            <a href="Donor">Blood Bank</a>
+                            <a href="request">Request for a Blood</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="dropdown">
+                          <a href="about" class="nav_link">About Us</a>
+                          <div class="dropdown-content">
+                            <a href="about">About</a>
+                            <a href="about">Contact Us</a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul> 
+                </div>
+            </nav>
+        </div>
+   </header>
+
+    <body>
+        <div class="wrapper">
+            {% block content %}
+            {% endblock %}
+ <footer >
+        <div class="container" id="s8">
+          <div class="row">
+            <div class="title">
+              <h1>Contact Information</h1>
+            </div>
+              <div class="footer-item1">
+                <h4> Address</h4>
+                <p>Area Bangbang,</p>
+                <p>Salawag Dasmarinas City, Cavite.</p>  
+                </p>
+
+              </div>
+
+              <div class="footer-item2">
+                <h4> Email Address</h4>
+                <p>dugtongbuhay@gmail.com </p>
+              </div>
+          
+              <div class="footer-item3">
+                <h4>Phone</h4>
+                  <p>123-4567</p>
+                </div>
+          </div>
+        </div>
+      </footer>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
